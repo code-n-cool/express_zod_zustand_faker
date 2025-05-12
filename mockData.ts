@@ -1,5 +1,16 @@
 import { faker } from '@faker-js/faker';
 import { createStore } from 'zustand/vanilla';
+/*
+import { z } from 'zod';
+
+export const UserSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  email: z.string().email(),
+  bio: z.string(),
+});
+export type User = z.infer<typeof UserSchema>;
+*/
 
 export interface User {
   id: number;
