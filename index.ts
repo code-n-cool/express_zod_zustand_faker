@@ -81,3 +81,16 @@ app.post('/api/logs', (req: Request, res: Response) => {
 app.listen(PORT, () => {
     console.log(`Backend running at http://localhost:${PORT}`);
 });
+
+app.get('/', (req: Request, res: Response) => {
+    res.json({
+        message: '🎉 Welcome to the Express + Zod + Zustand + Faker Mock API!',
+        status: 'Available',
+        endpoints: [
+            '/api/users',
+            '/api/users/:id',
+            '/api/logs'
+        ],
+        docs: 'Visit the README or GitHub for usage details.'
+    });
+});
